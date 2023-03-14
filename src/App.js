@@ -10,17 +10,20 @@ function App() {
     <div className="container">
       <BrowserRouter>
         <NavBar />
-
         <Routes>
           <Route
             path="/"
-            element={<ItemListContainer greeting={"Bienvenidos"} />}
+            element={<ItemListContainer greeting={"La Libreria oscura abre sus puertas"} />}
           />
           {/* URL segments */}
           <Route path="/detalle/:idUser" element={<ItemDetailContainer />} />
           <Route
             path="/category/:idCategory"
-            element={<ItemListContainer greeting={"Bienvenidos"} />}
+            element={<ItemListContainer greeting={"hellou"} />}
+          />
+            <Route
+            path="/category/:idCategorys/admin"
+            element={<ItemListContainer greeting={"hellou admins"} />}
           />
 
           <Route path="/prueba" element={<Prueba />} />
