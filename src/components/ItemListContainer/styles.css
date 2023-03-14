@@ -1,0 +1,55 @@
+.item-list-container .item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+.item-list-container .item-card {
+  width: 235px;
+  padding: 8px 12px;
+  -webkit-box-shadow: 0px 3px 10px #ececed;
+          box-shadow: 0px 3px 10px #ececed;
+  text-align: center;
+  margin: 8px 15px;
+  border-radius: 4px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.item-list-container .item-card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 6px 5px #dedede;
+          box-shadow: 0px 6px 5px #dedede;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.item-list-container h2 {
+  text-align: center;
+  color: blue;
+  font-size: 36px;
+}
+
+.item-list-container h4 {
+  color: red;
+}
+
+.item-list-container .button-detail-1 {
+  background: #090909;
+  background: -webkit-gradient(linear, left bottom, left top, from(#090909), to(#f40303));
+  background: linear-gradient(0deg, #090909 0%, #f40303 100%);
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  color: aliceblue;
+  font-weight: 900;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 16px 32px;
+  width: 200px;
+}
+/*# sourceMappingURL=styles.css.map */

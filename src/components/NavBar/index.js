@@ -22,13 +22,13 @@ function NavBar() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/category/admin">admins</Link>
+            <Link to="/category/Audiobook">Audiobook</Link>
           </li>
           <li>
-            <Link to="/category/editor ">editor</Link>
+            <Link to="/category/ebooks ">ebooks</Link>
           </li>
           <li>
-            <Link to="/category/subscriptor">subscriptor</Link>
+            <Link to="/category/books">books</Link>
           </li>
         </ul>
       </div>

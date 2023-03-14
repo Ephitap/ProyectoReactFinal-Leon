@@ -1,0 +1,59 @@
+.nav-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  padding: 10px 15px;
+  border-bottom: 2px solid;
+}
+
+.nav-bar .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar .left .logo {
+  margin-right: 55px;
+}
+
+.nav-bar .left .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.nav-bar .left .menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-bar .left .menu li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-bar .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+/*# sourceMappingURL=styles.css.map */
