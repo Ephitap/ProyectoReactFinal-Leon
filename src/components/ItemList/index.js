@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IconName } from "react-icons/fa";
 export default function ItemList({ users }) {
  
   return (
@@ -9,9 +10,10 @@ export default function ItemList({ users }) {
         {users.map((user) => (
           /* remplazar por componente <Item> */
           <li className="item-card" key={user.id}>
-            <img src={user.avatar} alt={user.first_name} />
-            <h4>{`${user.first_name} ${user.last_name}`}</h4>
-            <small>{user.email}</small>
+            <img src={user.imagenP} alt={user.precioP} />
+            <h4>${`${user.precioP} ${user.last_name}`}</h4>
+            <small>{user.titulo}</small>
+            <icon>{`${user.last_name}`}</icon>
             <br />
 
             <Link to={`/detalle/${user.id}`}>

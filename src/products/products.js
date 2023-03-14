@@ -1,51 +1,51 @@
 const products = [
     {
       id: 1,
-      email: "Ciapas cain 1",
-      first_name: "Georgee",
-      last_name: "Bluth",
-      avatar: "/img/audiobooks/CainLastStand.jpg",
+      titulo: "Ciapas cain 1",
+      precioP: "35000",
+      last_name: "",
+      imagenP: "/img/audiobooks/ForTheEmperor.jpg",
       category:"editor"
     },
     {
       id: 2,
-      email: "janet.weaver@reqres.in",
-      first_name: "Janet",
+      titulo: "janet.weaver@reqres.in",
+      precioP: "Janet",
       last_name: "Weaver",
-      avatar: "https://reqres.in/img/faces/2-image.jpg",
+      imagenP: "https://reqres.in/img/faces/2-image.jpg",
       category:"editor"
     },
     {
       id: 3,
-      email: "emma.wong@reqres.in",
-      first_name: "Emma",
+      titulo: "emma.wong@reqres.in",
+      precioP: "Emma",
       last_name: "Wong",
-      avatar: "https://reqres.in/img/faces/3-image.jpg",
+      imagenP: "https://reqres.in/img/faces/3-image.jpg",
       category:"admin"
 
     },
     {
       id: 4,
-      email: "eve.holt@reqres.in",
-      first_name: "Eve",
+      titulo: "eve.holt@reqres.in",
+      precioP: "Eve",
       last_name: "Holt",
-      avatar: "https://reqres.in/img/faces/4-image.jpg",
+      imagenP: "https://reqres.in/img/faces/4-image.jpg",
       category:"admin"
     },
     {
       id: 5,
-      email: "charles.morris@reqres.in",
-      first_name: "Charles",
+      titulo: "charles.morris@reqres.in",
+      precioP: "Charles",
       last_name: "Morris",
-      avatar: "https://reqres.in/img/faces/5-image.jpg",
+      imagenP: "https://reqres.in/img/faces/5-image.jpg",
       category:"subscriptor"
     },
     {
       id: 6,
-      email: "tracey.ramos@reqres.in",
-      first_name: "Tracey",
+      titulo: "tracey.ramos@reqres.in",
+      precioP: "Tracey",
       last_name: "Ramos",
-      avatar: "https://reqres.in/img/faces/6-image.jpg",
+      imagenP: "https://reqres.in/img/faces/6-image.jpg",
       category:"subscriptor"
     },
   ];

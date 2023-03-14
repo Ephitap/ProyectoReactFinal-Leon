@@ -47,10 +47,9 @@ function ItemDetailContainer({ greeting }) {
 
         <ul className="item-list">
           <li className="item-card" key={user.id}>
-            <img src={user.avatar} alt={user.first_name} />
-            <h4>{`${user.first_name} ${user.last_name}`}</h4>
-            <small>{user.email}</small>
-            <p>$5000</p>
+            <img src={user.imagenP} alt={user.precioP} />
+            <h5>{`${user.precioP} ${user.last_name}`}</h5>
+            <h4>{user.titulo}</h4>
             <button>Agregar al carrito</button>
           </li>
         </ul>

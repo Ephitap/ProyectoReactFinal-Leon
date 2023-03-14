@@ -9,10 +9,10 @@ function NavBar() {
         <div className="logo">
           <Link to="/">
             <img
-              src="https://via.placeholder.com/100x50"
+              src="/img/pagesImg/blackLibrary.png"
               alt="Site logo"
-              height="50"
-              width="100"
+              height="35"
+              
             />
           </Link>
         </div>

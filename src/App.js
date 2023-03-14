@@ -19,11 +19,7 @@ function App() {
           <Route path="/detalle/:idUser" element={<ItemDetailContainer />} />
           <Route
             path="/category/:idCategory"
-            element={<ItemListContainer greeting={"hellou"} />}
-          />
-            <Route
-            path="/category/:idCategorys/admin"
-            element={<ItemListContainer greeting={"hellou admins"} />}
+            element={<ItemListContainer greeting={"Libros"} />}
           />
 
           <Route path="/prueba" element={<Prueba />} />
