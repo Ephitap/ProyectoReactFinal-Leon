@@ -4,12 +4,15 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Prueba from "./pages/Prueba";
 import NotFound from "./pages/NotFound";
+import { CartContextProvider} from "./context/cartContext";
 
 function App() {
   return (
     <div className="container">
+      <CartContextProvider>
       <BrowserRouter>
         <NavBar />
+
         <Routes>
           <Route
             path="/"
@@ -27,6 +30,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </CartContextProvider>
     </div>
   );
 }

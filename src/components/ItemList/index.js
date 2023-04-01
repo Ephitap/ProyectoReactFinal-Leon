@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IconName } from "react-icons/fa";
+import Button from "../Button";
 export default function ItemList({ users }) {
  
   return (
@@ -17,7 +18,10 @@ export default function ItemList({ users }) {
             <br />
 
             <Link to={`/detalle/${user.id}`}>
-              <button className="button-detail-1">Ver más</button>
+             {/*<button className="button-detail-1">Ver más</button> */}
+              <Button  onTouchButton={() => {console.log("clickeaste"); }} >
+          Ver detalles
+          </Button>
             </Link>
           </li>
           /* hasta aca </Item> */
