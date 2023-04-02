@@ -33,7 +33,12 @@ function NavBar() {
         </ul>
       </div>
       <div className="right">
-        <CartWidget />
+        <Link to="/cart">
+        <CartWidget/>
+        </Link>
+        
+        
+        
       </div>
     </div>
   );

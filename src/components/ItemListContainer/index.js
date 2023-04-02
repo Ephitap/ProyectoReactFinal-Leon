@@ -24,6 +24,7 @@ function getItemsByCategoryFromDatabase(categoryURL){
 
 function ItemListContainer({ greeting }) {
   const [users, setUsers] = useState([]);
+  const [isLoading,setIsLoading]= useState(true);
 
   const params = useParams();
   const idCategory = params.idCategory;
@@ -32,10 +33,12 @@ function ItemListContainer({ greeting }) {
     if (idCategory === undefined){
       let respuesta = await getItemsFromDatabase();
       setUsers(respuesta);
+      setIsLoading(false);
     } 
     else{
      let respuesta = await getItemsByCategoryFromDatabase(idCategory)
      setUsers(respuesta);
+     setIsLoading(false);
     }
   }
 
@@ -43,35 +46,17 @@ function ItemListContainer({ greeting }) {
     leerDatos();
   },[idCategory]);
 
-/* --ESTE ES EL QUE FUNCIONA  -- */
-/*
-  useEffect(() =>{
-    let promiseData=getItemsFromDatabase();
-
-    promiseData.then((respuesta) => {
-     setUsers(respuesta)
-    })
-    .catch((error) => alert(error));
-  }, []);
-  */
-/* --ESTE ES EL QUE FUNCIONA-- */
-
- /* useEffect(() => {
-    fetch("https://reqres.in/api/users")
-      .then((res) => {
-        return res.json();
-      })
-      .then((json) => {
-        console.log("json", json);
-        setUsers(json.data);
-      });
-  }, []);
-  */
-
+     
   return (
     <>
       <h2>{greeting}</h2>
-      <ItemList users={users} />
+      {
+        isLoading?
+        <p>Cargando...</p>
+        :
+        <ItemList users={users} />
+      }
+      
     </>
   );
 }

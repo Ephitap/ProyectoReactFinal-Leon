@@ -13,7 +13,10 @@ function getSingleItemsFromDatabase(idItem) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       let encontrado = products.find((item) => item.id === Number(idItem));
+      if(encontrado != undefined)
       resolve(encontrado);
+      else
+      reject("Producto no encontrado")
     }, 1000);
   });
 }
@@ -42,7 +45,7 @@ function ItemDetailContainer({ greeting }) {
   useEffect(() => {
     getSingleItemsFromDatabase(idUser).then(respuesta => {
       setUser(respuesta);
-    });
+    }).catch(error => alert(error))
   }, []);
 
   const { addItem } = useContext(cartContext)
@@ -51,6 +54,9 @@ function ItemDetailContainer({ greeting }) {
     alert(`Agregaste ${count} items al carrito de mentira`);
     addItem(user,count);
 }
+//rendering condicional con return anticipado
+if(user.titulo === undefined)
+return <p>Cargando...</p>
 
   return (
     <>
@@ -75,15 +81,12 @@ function ItemDetailContainer({ greeting }) {
           </div>
           <div className="basic-info" key={user.id}>
           <h3>${user.precioP}</h3>
+          <small>{user.category}</small>
+          
             <div className="button-detail">
               {/*<button className="button-detail-1"> Agregar al carrito</button> */}
               {/*<button className="button-detail-1">Comprar de inmediato</button>*/}
-              <Button onTouchButton={() => alert("Agregarte al carrito")} >
-          Agregar al carrito
-          </Button>
-          <Button onTouchButton={() => {console.log("clickeaste"); }} >
-          Comprar de inmediato
-          </Button>
+              
           
           <ItemCount OnAddToCart={OnAddToCart} 
           initial={1} 
