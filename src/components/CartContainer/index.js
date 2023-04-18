@@ -1,34 +1,53 @@
 import React, { useContext } from 'react';
 import cartContext from '../../context/cartContext';
+import CheckoutCart from "./CheckoutCart";
+import "./styles.css";
 
 function CartContainer() {
-    const { cart } = useContext(cartContext);
+  const { cart, removeItemFromCart, getPriceInCart } = useContext(cartContext);
 
+  return (
+    <>
+      <h1>Tu Carrito</h1>
 
-    /*Condicional carrito vacio */
-    if(cart.length === 0)
-    return( <div>
-        <h2>carrito vacio</h2>
-    </div>)
-  /*listado de esos productos*/
-  return(
-    <div>
-    <h1>tu carrito</h1>
-  {cart.map ((item) =>{
-    return (
-        <div>
-             <img src={item.imagenP} alt={item.titulo} />
-            <p>Producto: {item.titulo}</p>
-            <p>Cantidad de unidades: {item.count}</p>
-            <p>Precio: ${item.precioP}</p>
-            <p>Total Cantidad: ${item.precioP*item.count}</p>
-            <hr></hr>
-        </div>
-    );
-    <h1>El total de tu compra es: ${item.precioP*item.count}</h1>
-  })}
-</div>
-  ); 
+      <table className="cartList">
+        <thead className="cartList_head">
+          <tr className="cartList_row">
+            <th>Iamgen</th>
+            <th>Productos</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Remover</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cart.map((item) => {
+            return (
+              <tr key={item.id} className="cartList_row">
+                <td>
+                  <img height={50} src={item.imagenP} alt={item.titulo} />
+                </td>
+                <td>{item.titulo}</td>
+                <td>$ {item.precioP}</td>
+                <td>{item.count}</td>                
+                <td>
+                  <button onClick={()=> removeItemFromCart(item.id)}>X</button>
+                </td>
+                <th>$ --,--</th>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+        
+      <div className="cartList_detail">
+        <h4>El total de tu compra es de $ --,--</h4>
+      </div>
+
+      <CheckoutCart total={getPriceInCart()} cart={cart}/>
+    </>
+  );
 }
 
 export default CartContainer;

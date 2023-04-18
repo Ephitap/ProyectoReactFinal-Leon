@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, getDocs, query, where  } from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCM1pRQ-La8eYYpG73hCt0hFhQds39VIB4",
   authDomain: "react-39575-17912.firebaseapp.com",
@@ -19,6 +20,8 @@ const firebaseConfig = {
   messagingSenderId: "635849251715",
   appId: "1:635849251715:web:0e8c2266a1bdefdc0534b6"
 };
+
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
