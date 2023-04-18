@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Proyecto final de react basado en la editorial "The Black Library" de Games Workshop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link del deploy: https://proyecto-react-final-leon.vercel.app
+-Abraham León
 
 ## Available Scripts
 
