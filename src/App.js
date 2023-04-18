@@ -7,6 +7,9 @@ import NotFound from "./pages/NotFound";
 import { CartContextProvider} from "./context/cartContext";
 import CartContainer from "./components/CartContainer";
 
+
+
+
 function App() {
   return (
     <div className="container">
