@@ -34,7 +34,7 @@ function CartContainer() {
                 <td>
                   <button onClick={()=> removeItemFromCart(item.id)}>X</button>
                 </td>
-                <th>$ --,--</th>
+                <th className="precio"> $ {item.precioP * item.count}</th>
               </tr>
             );
           })}
@@ -42,7 +42,7 @@ function CartContainer() {
       </table>
         
       <div className="cartList_detail">
-        <h4>El total de tu compra es de $ --,--</h4>
+        <h4>El total de tu compra es de $ {getPriceInCart()}</h4>
       </div>
 
       <CheckoutCart total={getPriceInCart()} cart={cart}/>

@@ -11,34 +11,37 @@ import CartContainer from "./components/CartContainer";
 
 
 function App() {
-  return (
-    <div className="container">
-      <CartContextProvider>
-      <BrowserRouter>
-        <NavBar />
-
-        <Routes>
-          <Route
-            path="/"
-            element={<ItemListContainer greeting={"La Libreria oscura abre sus puertas"} />}
-          />
-          {/* URL segments */}
-          <Route path="/detalle/:idUser" element={<ItemDetailContainer />} />
-          <Route
-            path="/category/:idCategory"
-            element={<ItemListContainer greeting={"Libros"} />}
-          />
-
-          <Route path="/prueba" element={<Prueba />} />
-
-          <Route path="/cart" element={<CartContainer />} />
-
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      </CartContextProvider>
-    </div>
-  );
-}
-
+    return (
+      <div className="container">
+        <CartContextProvider>
+          <BrowserRouter>
+            <NavBar />
+            <Routes>
+              <Route
+                path="/"
+                element={<ItemListContainer greeting={"La Libreria oscura abre sus puertas"} />}
+              />
+              {/* URL segments */}
+              <Route path="/detalle/:idUser" element={<ItemDetailContainer />} />
+  
+              <Route
+                path="/category/:idCategory"
+                element={<ItemListContainer greeting={"Libros"} />}
+              />
+  
+              <Route path="/prueba" element={<Prueba />} />
+  
+              <Route path="/cart" element={<CartContainer />} />
+              <Route
+                path="/checkout/:id"
+                element={<h3>Gracias por tu compra</h3>}
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </CartContextProvider>
+      </div>
+    );
+  }
+   
 export default App;

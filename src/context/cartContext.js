@@ -37,13 +37,15 @@ export function CartContextProvider({ children }) {
   function getCountInCart() {
     /* reduce */
     let total = 0;
-    //for(let i = 0; i < cart.length; i++)
+    for(let i = 0; i < cart.length; i++)
     cart.forEach((item) => total + item.count);
     return total;
   }
 
+
   function getPriceInCart() {
-    return 5600;
+    const CalculoTotalCarrito = 36000
+    return CalculoTotalCarrito;
   }
 
   function isInCart(id) {
@@ -59,6 +61,7 @@ export function CartContextProvider({ children }) {
         isInCart,
         removeItemFromCart,
         getPriceInCart,
+        getCountInCart,
       }}
     >
       {children}
