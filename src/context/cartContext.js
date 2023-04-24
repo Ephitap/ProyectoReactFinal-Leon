@@ -64,10 +64,9 @@ export function CartContextProvider({ children }) {
         addItem,
         test: "ok",
         isInCart,
-        clearCart,
-        removeItemFromCart,
+        
         getPriceInCart,
-        getCountInCart,
+        
       }}
     >
       {children}

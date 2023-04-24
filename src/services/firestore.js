@@ -27,25 +27,3 @@ export async function createOrder(orderData) {
 }
 
 /* Opcional*/
-export async function exportData() {
-  //for ... of
-  const collectionRef = collection(db, "products");
-
-  for (let item of products) {
-    const { id } = await addDoc(collectionRef, item);
-    console.log("Documento creado", id);
-  }
-}
-
-export async function exportDataWithBatch() {
-  const batch = writeBatch(db);
-  const collectionRef = collection(db, "products");
-
-  for (let item of products) {
-    const newDoc = doc(collectionRef);
-    batch.set(newDoc, item);
-  }
-
-  const resp = await batch.commit();
-  console.log(resp);
-}
