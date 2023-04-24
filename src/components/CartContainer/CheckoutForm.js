@@ -6,7 +6,7 @@ export default function CheckoutForm(props) {
     email: "",
     phone: "",
   });
-
+//
   console.log(userData);
 
   function handleChange(evt) {
@@ -31,9 +31,9 @@ export default function CheckoutForm(props) {
   }
 
   return (
-    <div>
-      <h2>Completa tus datos para completar la compra🛍</h2>
-      <div style={{ display: "flex", marginBottom: 8 }}>
+    <div style={{textAlign:"center",borderStyle:"solid",borderColor:"black"}}>
+      <h2>Completa tus datos para completar la compra</h2>
+      <div style={{ display: "flex", marginBottom: 8, justifyContent:"center" }}>
         <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
         <input
           value={userData.name}
@@ -44,7 +44,7 @@ export default function CheckoutForm(props) {
         />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
+      <div style={{display: "flex", marginBottom: 8, justifyContent:"center" }}>
         <label style={{ width: "100px", marginRight: 4 }}>Email</label>
         <input
           value={userData.email}
@@ -55,7 +55,7 @@ export default function CheckoutForm(props) {
         />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
+      <div style={{display: "flex", marginBottom: 8, justifyContent:"center"}}>
         <label style={{ width: "100px", marginRight: 4 }}>Phone</label>
         <input
           value={userData.phone}
@@ -65,7 +65,7 @@ export default function CheckoutForm(props) {
           onChange={handleChange}
         />
       </div>
-      <button
+      <button className="button-detail-1"
         disabled={
           !(
             userData.name !== "" &&
@@ -77,7 +77,7 @@ export default function CheckoutForm(props) {
       >
         Crear orden
       </button>
-      <button onClick={clearForm}>limpiar form</button>
+      <button onClick={clearForm} className="button-detail-1">limpiar form</button>
     </div>
   );
 }

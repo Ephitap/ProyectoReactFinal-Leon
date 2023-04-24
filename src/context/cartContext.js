@@ -1,6 +1,7 @@
+import { clear } from "@testing-library/user-event/dist/clear";
 import { createContext, useState } from "react";
 
-//1 crear el context
+//1 crear el context  
 const cartContext = createContext({ cart: [] });
 const Provider = cartContext.Provider;
 
@@ -24,6 +25,7 @@ export function CartContextProvider({ children }) {
 
   function clearCart() {
     /* vaciar carrito */
+    
   }
 
   function removeItemFromCart(id) {
@@ -41,10 +43,11 @@ export function CartContextProvider({ children }) {
     cart.forEach((item) => total + item.count);
     return total;
   }
+  
 
 
   function getPriceInCart() {
-    const CalculoTotalCarrito = 36000
+    const CalculoTotalCarrito = 40000;
     return CalculoTotalCarrito;
   }
 
@@ -52,6 +55,8 @@ export function CartContextProvider({ children }) {
     return cart.some((item) => item.id === id);
   }
 
+  
+  
   return (
     <Provider
       value={{
@@ -59,6 +64,7 @@ export function CartContextProvider({ children }) {
         addItem,
         test: "ok",
         isInCart,
+        clearCart,
         removeItemFromCart,
         getPriceInCart,
         getCountInCart,

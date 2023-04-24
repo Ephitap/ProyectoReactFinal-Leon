@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import cartContext from '../../context/cartContext';
 import CheckoutCart from "./CheckoutCart";
-import "./styles.css";
+import "./styles.scss";
+
 
 function CartContainer() {
   const { cart, removeItemFromCart, getPriceInCart } = useContext(cartContext);
+
 
   return (
     <>
@@ -13,7 +15,7 @@ function CartContainer() {
       <table className="cartList">
         <thead className="cartList_head">
           <tr className="cartList_row">
-            <th>Iamgen</th>
+            <th>Imagen</th>
             <th>Productos</th>
             <th>Precio</th>
             <th>Cantidad</th>

@@ -21,7 +21,7 @@ function App() {
                 path="/"
                 element={<ItemListContainer greeting={"La Libreria oscura abre sus puertas"} />}
               />
-              {/* URL segments */}
+              {/* URL segments  */}
               <Route path="/detalle/:idUser" element={<ItemDetailContainer />} />
   
               <Route

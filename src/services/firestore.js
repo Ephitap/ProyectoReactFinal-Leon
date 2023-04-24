@@ -26,7 +26,7 @@ export async function createOrder(orderData) {
   return response.id;
 }
 
-/* Opcional */
+/* Opcional*/
 export async function exportData() {
   //for ... of
   const collectionRef = collection(db, "products");

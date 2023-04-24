@@ -24,5 +24,5 @@ function CheckoutCart({ cart, total }) {
     </div>
   );
 }
-
+//
 export default CheckoutCart;
