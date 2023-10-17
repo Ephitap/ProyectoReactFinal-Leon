@@ -9,10 +9,13 @@ const firebaseConfig = {
   projectId: "react-39575-17912",
   storageBucket: "react-39575-17912.appspot.com",
   messagingSenderId: "635849251715",
-  appId: "1:635849251715:web:0e8c2266a1bdefdc0534b6"
+  appId: "1:635849251715:web:0e8c2266a1bdefdc0534b6",
+  measurementId: "G-FXQHTN796C"
 };
+
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
 
 export async function createOrder(orderData) {
