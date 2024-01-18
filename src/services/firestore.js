@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore,addDoc,doc,collection,writeBatch,} from "firebase/firestore";
-
+import { getAnalytics } from "firebase/analytics";
 /*cambiar esta shit */
 //-------------------config firebase--------------------------
 const firebaseConfig = {
@@ -10,12 +9,10 @@ const firebaseConfig = {
   storageBucket: "react-39575-17912.appspot.com",
   messagingSenderId: "635849251715",
   appId: "1:635849251715:web:0e8c2266a1bdefdc0534b6",
+  measurementId: "G-FXQHTN796C"
 };
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
 
 export async function createOrder(orderData) {
   const collectionRef = collection(db, "orders");
